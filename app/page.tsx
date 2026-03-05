@@ -30,7 +30,8 @@ export default function LoginPage() {
 
     // Mock validation
     if (email === "usuario@exemplo.com" && password === "123456") {
-      router.push("/dashboard")
+      console.log("[v0] Login success, redirecting to /dashboard")
+      window.location.href = "/dashboard"
     } else {
       setError("Credenciais incorretas. Tente novamente.")
       setIsLoading(false)
